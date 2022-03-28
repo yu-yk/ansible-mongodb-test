@@ -1,0 +1,4 @@
+[mongod]
+mongodb1 ansible_host=127.0.0.1 ansible_port=20001 ansible_user=root
+mongodb2 ansible_host=127.0.0.1 ansible_port=20002 ansible_user=root
+mongodb3 ansible_host=127.0.0.1 ansible_port=20003 ansible_user=root

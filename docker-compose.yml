@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  
+  mongodb1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mongodb1
+    hostname: mongodb1
+    privileged: true
+    tty: true
+    expose:
+      - "27017"
+    ports:
+      - "20001:22"
+    volumes:
+      - ./mongodb1:/root
+
+  mongodb2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mongodb2
+    hostname: mongodb2
+    privileged: true
+    tty: true
+    expose:
+      - "27017"
+    ports:
+      - "20002:22"
+    volumes:
+      - ./mongodb2:/root
+
+  mongodb3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mongodb3
+    hostname: mongodb3
+    privileged: true
+    tty: true
+    expose:
+      - "27017"
+    ports:
+      - "20003:22"
+    volumes:
+      - ./mongodb3:/root
